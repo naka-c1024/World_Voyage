@@ -6,4 +6,26 @@
 
 {% block main %}
 <!-- TODO: インデックスの中身 -->
+
+<main class="container-fluid py-5 text-center">
+    <form method="post" action="{{ url_for('map') }}">
+        <div>
+          <h1>あなたの国を選択してください</h1>
+          <select class="bg-white text-gray-900">
+            <option>日本</option>
+            <option>中国</option>
+            <option>アメリカ</option>
+          </select>
+          <h1>どのような用途で使用しますか？</h1>
+          <select class="bg-white text-gray-900">
+            <option>学校の勉強用</option>
+            <option>地図探索者向け</option>
+          </select>
+        </div>
+        <div>
+            <input type="submit" value="送信する">
+        </div>
+    </form>
+</main>
+
 {% endblock %}
