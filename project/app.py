@@ -7,10 +7,6 @@ from tempfile import mkdtemp
 from werkzeug.security import check_password_hash, generate_password_hash
 
 from controllers import index_controller, event_controller, map_controller, summary_controller, timeline_controller
-from dotenv import load_dotenv
-
-# .envファイルの内容を読み込見込む
-load_dotenv()
 
 # Configure application, flaskのインスタンス化 (https://teratail.com/questions/356066)
 app = Flask(__name__)

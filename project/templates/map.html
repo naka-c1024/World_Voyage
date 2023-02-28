@@ -4,14 +4,28 @@
     マップ
 {% endblock %}
 
-{% block main %}
-<p>This is map.html</p>
-<form action="/summary" method="get">
+{% block head %}
+    <script type="text/javascript" src="{{ url_for('static', filename='js/googleMap.js') }}"></script>
 
-    <!-- TODO: name='region' をつけてsubmit -->
-    <div class="mb-3">
-        <input class="form-control mx-auto w-auto" name="region" placeholder="region" type="text">
-    </div>
-    <button class="btn btn-primary" type="submit">Submit</button>
-</form>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key={{ google_maps_api_key }}&callback=initMap">
+    </script>
+{% endblock %}
+
+{% block main %}
+<main class="container-fluid py-5 text-center">
+    <p>This is map.html</p>
+    <p>自宅の地図です。</p>
+
+    <div id="map" style="width:100%; height:400px"></div>
+
+    <form action="/summary" method="get">
+
+        <!-- TODO: name='region' をつけてsubmit -->
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" name="region" placeholder="region" type="text">
+        </div>
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+</main>
 {% endblock %}
