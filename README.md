@@ -91,3 +91,9 @@ docker compose down
 docker image ls # イメージを確認
 docker image rm <image ID>
 ```
+
+## TailwindCSSを更新するときに使用
+
+```
+npx tailwindcss -i ./static/src/input.css -o ./static/dist/css/output.css --watch
+```

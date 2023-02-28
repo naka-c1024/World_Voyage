@@ -14,18 +14,13 @@
 
 {% block main %}
 <main class="container-fluid py-5 text-center">
-    <p>This is map.html</p>
-    <p>自宅の地図です。</p>
-
     <div id="map"></div>
 
     <form action="/summary" method="get">
-
-        <!-- TODO: name='region' をつけてsubmit -->
         <div class="mb-3">
             <input class="form-control mx-auto w-auto" name="region" placeholder="region" type="text">
         </div>
-        <button class="btn btn-primary" type="submit">Submit</button>
+        <button class="shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" type="submit">Submit</button>
     </form>
 </main>
 {% endblock %}
