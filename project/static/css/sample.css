@@ -7,3 +7,9 @@
     color: white;
     margin:5px;
 }
+
+/* Google mapを表示するコード */
+#map {
+    width: 100%;
+    height: 600px;
+  }
