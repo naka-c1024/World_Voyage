@@ -11,8 +11,11 @@ from helpers import apology
 def region_info():
     region_name = request.args.get('region')
     placeID = request.args.get('placeID') # indexから直接の場合は空
+    placeName = request.args.get('placeName')
     country_name = request.args.get('country')
 
+    if placeName:
+        return redirect("https://www.google.com/search?q=" + placeName)
     if not region_name: # indexから直接国が渡される場合
         region_name = request.args.get('nation')
     if not region_name:
