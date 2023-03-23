@@ -7,6 +7,9 @@ from helpers import apology
 
 def map():
     google_maps_api_key = os.getenv("GOOGLE_MAPS_API_KEY")
+    if not google_maps_api_key:
+        flash('金銭面を考慮し現在Google Maps APIを稼働させていないため地図を表示することができません')
+        return redirect("/")
     nation_name = request.args.get('nation')
 
     placeIDs = [] # htmlに渡す用の空リスト作成

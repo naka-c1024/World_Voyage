@@ -35,10 +35,6 @@ Session(app)
 # .envファイルの内容を読み込む
 load_dotenv()
 
-# API keyがセットされていることを確認
-if not os.getenv("GOOGLE_MAPS_API_KEY"):
-    raise RuntimeError("GOOGLE_MAPS_API_KEY not set")
-
 # リクエストを送った後レスポンスがcacheされないように設定している
 @app.after_request
 def after_request(response):
