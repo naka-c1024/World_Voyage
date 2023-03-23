@@ -1,7 +1,4 @@
-:::note warn
-警告
-Google Maps APIを自分のものに変更する
-:::
+！Google Maps APIを自分のものに変更したプロダクト
 
 # World Voyage ![ロゴ](/static/favicon.ico)
 このプロダクトは、調べたい国や県がある場所の地図をクリックすることでそこの歴史・地理を調べられる、視覚的に楽しんで勉強できるサイトです。
